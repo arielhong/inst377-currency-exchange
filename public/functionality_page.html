@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Currency Exchange</title>
+        <link rel="stylesheet" href="webpage_design.css">
+        <script src="currency_exchange_code.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    </head>
+
+    <body>
+        <!-- Nav Bar-->
+        <nav id="main-nav">
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="functionality_page.html">Currency Exchange</a></li>
+                <li><a href="about_page.html">About</a></li>
+                <li><a href="help_page.html">Help</a></li>
+            </ul>
+        </nav>
+        
+        <div id="conversionDiv">
+            <h1>Find Exchange Rate</h1>
+            <form id="exchangeRateForm" method="get" 
+            action="https://v6.exchangerate-api.com/v6/48dd20908e28d29b16d01d11/latest/USD" 
+            onsubmit="createExchange(); makeChart(); return false">
+                <label for="amount">Amount: </label>
+                <input type="number" id="amount" step="0.01" required>
+                <label for="from">From: </label>
+                <select id="from" class="currency" required></select>
+                <label for="to">To: </label>
+                <select id="to" class="currency" required></select>
+                <input type="submit">
+            </form>
+        </div>
+        <div id="converted">
+
+        </div>
+        
+        <div id="chartDiv">
+            <div id="toChart">
+                <h2 id="toText"></h2>
+                <canvas id="myChart1"></canvas>
+            </div>
+            <div id="fromChart">
+                <h2 id="fromText"></h2>
+                <canvas id = "myChart2"></canvas>
+            </div>
+            
+        </div>
+
+        <!-- Background Image Section -->
+        <div class="bg-image"> </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <h3>INST377 Group Project</h3>
+            <p>Katherine Argente, Daniel Gwira, Ariel Hong, Larissa Musaga, Arshul Shaik</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,306 @@
+body {
+    background-color: powderblue;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    /*
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230722/pngtree-world-s-primary-currency-exchange-in-3d-render-on-black-background-image_3770009.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    */
+    /*opacity: 0.5;*/ 
+    /*filter: blur(8px);*/  
+}
+
+#converted{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: none;
+    border: 2px solid black;
+    text-align: center;
+    width: 480px;
+    float: center;
+    padding: 30px;
+    margin: 100px auto auto auto;
+    font-size: 20px;
+    display: none;
+}
+
+.background-image {
+    height: 1000px;
+    width:100%;
+    opacity: 0.7; 
+    filter: blur(8px);
+    display: block;
+}
+
+.bg-image {
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230722/pngtree-world-s-primary-currency-exchange-in-3d-render-on-black-background-image_3770009.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    opacity: 0.7; 
+    filter: blur(8px);
+}
+
+.home-mainText{
+    font-size: 22px;
+    position: absolute;
+    text-align: center;
+    border:3px solid seashell;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    
+}
+
+#main-nav {
+    background-color: seashell;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+#main-nav li {
+    display: inline-block;
+    position: relative;
+}
+
+#main-nav li:hover {
+    background-color: mediumaquamarine;
+    color: linen;
+}
+
+#main-nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.footer {
+    background-color: papayawhip;
+    text-align: center;
+    padding: 1px;
+}
+
+/*
+.converted {
+    background-color: floralwhite;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* Styling for the About section */
+.about-section {
+    background-color: floralwhite;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: steelblue;
+}
+
+.about-section h3 {
+    color: darkslategray;
+    margin-top: 20px;
+}
+
+.about-section p {
+    line-height: 1.6;
+}
+
+
+/* Additional CSS for the Help section */
+ .help-section {
+    background-color: floralwhite;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.help-section h2 {
+    color: steelblue;
+}
+
+.help-section h3 {
+    color: darkslategray;
+    margin-top: 20px;
+}
+
+.help-section p {
+    line-height: 1.6;
+}
+/* Additional CSS for the contact form */
+form {
+    margin-top: 20px; /* Add space above the form */
+}
+
+label {
+    font-weight: bold; /* Make labels bold */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Make input fields and textarea full width */
+    padding: 8px; /* Add padding to input fields and textarea */
+    margin-bottom: 10px; /* Add space between input fields and textarea */
+    border: 1px solid #ccc; /* Add border to input fields and textarea */
+    border-radius: 5px; /* Add border radius to input fields and textarea */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add padding to button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+label[for="amount"],label[for="from"], label[for="to"] {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#chartDiv {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+#toChart,  #fromChart {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px;
+}
+
+canvas {
+  width: 100%;
+  height: auto
+}
+
+.thank-you-message {
+  align-items: center;
+  margin:100px auto 100px auto;
+  text-align: center;
+  font-size: larger;
+}
+
+
+/* extra credit 'advanced css effect'*/
+  
+  span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    z-index: -1;
+    animation: ripple 1.5s ease-out infinite;
+  }
+  
+  span:first-child {
+    background-color: #ff414d;
+  }
+  
+  span:first-child::before {
+    animation-delay: 0.2s;
+  }
+  
+  span:nth-child(2) {
+    background-color: #ff7a00;
+    transform: scale(0.9);
+  }
+  
+  span:nth-child(2)::before {
+    animation-delay: 0.4s;
+  }
+  
+  span:nth-child(3) {
+    background-color: #28df99;
+    transform: scale(0.8);
+  }
+  
+  span:nth-child(3)::before {
+    animation-delay: 0.6s;
+  }
+  
+  span:nth-child(4) {
+    background-color: #81b214;
+    transform: scale(0.7);
+  }
+  
+  span:nth-child(4)::before {
+    animation-delay: 0.8s;
+  }
+  
+  span:last-child {
+    background-color: #f09ae9;
+    transform: scale(0.6);
+  }
+  
+  span:last-child::before {
+    animation-delay: 1s;
+  }
+  
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale(0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(3);
+    }
+  }
+  /* Ripple Loader Effect */
+  .loader-container {
+    position: absolute;
+    bottom: -50px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 5px;
+    position: relative;
+}
